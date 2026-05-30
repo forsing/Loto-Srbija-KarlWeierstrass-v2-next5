@@ -1,0 +1,113 @@
+3_KarlWeierstrass_NEXT5_2b3a — Hurst/R-S + Hurst (POGODNO)
+============================================================
+
+KORAK 1: Weierstrass-ova funkcija nad svih izvucenih kombinacija
+
+  CSV izvucenih:        /Users/4c/Desktop/GHQ/data/loto7_4624_k43.csv
+  Ucitano izvlacenja:    4624
+  C(39,7):              15,380,937
+  f(t) = lex-indeks izvucene kombinacije u skupu svih 39C7
+
+
+============================================================
+KORAK 2b3a: Aparat 2b Hurst/R-S + Test 3a Hurst eksponent
+============================================================
+
+  PNG:                  /Users/4c/Desktop/GHQ/KarlWeierstrass/3_KarlWeierstrass_NEXT5_2b3a.png
+
+Globalni Hurst nad f(t):
+  H(f(t))               = 0.59306018
+  R^2                   = 0.99877996
+
+Rolling/local Hurst:
+  window                = 768
+  step                  = 128
+  broj prozora          = 31
+  mean H                = 0.59744976
+  std H                 = 0.02523894
+  min H                 = 0.54938116
+  max H                 = 0.64664744
+  persistent H>0.55     = 30/31
+  anti H<0.45           = 0/31
+
+Shuffled Hurst referenca:
+  runs                  = 100
+  mean                  = 0.56421629
+  std                   = 0.01728079
+  z                     = 1.66912981
+  p_high                = 0.03000000
+  p_low                 = 0.97000000
+  interpret.            = globalni H je iznad shuffled reference
+
+Rolling H tacke:
+  center                   H             R^2
+  385             0.57764101      0.97802319
+  513             0.55886327      0.98311079
+  641             0.55301991      0.98932761
+  769             0.58038657      0.99226626
+  897             0.54938116      0.98073889
+  1025            0.58130666      0.99239465
+  1153            0.56565104      0.99107554
+  1281            0.57931098      0.99426878
+  1409            0.61905217      0.99684553
+  1537            0.60052342      0.99649088
+  1665            0.56734156      0.99625997
+  1793            0.60723249      0.99646099
+  1921            0.61394088      0.99813333
+  2049            0.58518358      0.99605077
+  2177            0.60036376      0.99592355
+  2305            0.58142144      0.99534930
+  2433            0.62024653      0.99386274
+  2561            0.62590310      0.99733313
+  2689            0.64631393      0.99568070
+  2817            0.59744699      0.99708909
+  2945            0.60268268      0.99546932
+  3073            0.62044000      0.99305673
+  3201            0.58626997      0.99217544
+  3329            0.58173509      0.99686666
+  3457            0.60114300      0.99743621
+  3585            0.61228898      0.99681286
+  3713            0.60348408      0.99380151
+  3841            0.62518803      0.99846151
+  3969            0.64664744      0.99869685
+  4097            0.60671247      0.99468461
+  4225            0.62382045      0.99842733
+
+Vreme KORAKA 2b3a: 0:00:06 (6.0 s)
+Ukupno vreme:       0:00:06 (6.0 s)
+
+============================================================
+PREDIKCIJA 5: NEXT5 / 2b3a / Hurst perzistentni rezim
+============================================================
+
+Model:
+  H(f)>0.5 i skoro svi rolling prozori H>0.55 pokazuju perzistentan rezim.
+  Lokalni trend u zadnjem rolling prozoru se kombinuje sa zadnjim inkrementom.
+  Sto je H dalje iznad 0.5, to zadnji inkrement ima vecu tezinu.
+
+Parametri:
+  H global               = 0.59306018
+  H zadnji rolling       = 0.62382045
+  R2 zadnji rolling      = 0.99842733
+  persistence strength   = 0.72293543
+  local window           = 768
+  lokalni slope          = -739.26066925
+  lokalni resid std      = 4,500,683.77058056
+  recent mean dX         = -6,859.22555411
+  zadnji dX              = -2,143,496.00000000
+  zadnji lex             = 513,114
+  pred. inkrement        = -1,551,509.64251513
+
+Glavna prognoza:
+  pred. lex float        = -1,038,395.64251513
+  pred. lex              = 1
+  pred. kombinacija      = (1, 2, 3, 4, 5, 6, 7)
+
+Kandidati oko Hurst-trend prognoze:
+         z           lex  kombinacija
+     -1.28             1  (1, 2, 3, 4, 5, 6, 7)
+      0.43       896,898  (1, 4, 6, 21, 27, 35, 38)
+      0.84     2,742,179  (1, 22, 23, 24, 25, 31, 38)
+      1.28     4,722,480  (2, 12, 13, 25, 28, 31, 38)
+
+Vreme PREDIKCIJE 5: 0:00:00 (0.0 s)
